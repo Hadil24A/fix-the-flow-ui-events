@@ -63,11 +63,31 @@ userFlow.addEventListener('click', function() {
   })
 
 
-// Element 6 long press
+// Element 6 click
 
 let code = document.querySelector('a:nth-of-type(20)')
 
 code.addEventListener('click', function() {
 
   code.classList.toggle('code-click')
+})
+
+
+//  Element 7 mouseup
+
+let states = document.querySelector('a:nth-of-type(18)')
+
+states.addEventListener('mouseup', function() {
+  
+  states.classList.toggle('states-size')
+})
+
+
+//  Element 8
+
+let feedback = document.querySelector('a:nth-of-type(15)')
+
+feedback.addEventListener('dblclick', function(){
+
+  feedback.classList.toggle('feedback-fade-in')
 })
