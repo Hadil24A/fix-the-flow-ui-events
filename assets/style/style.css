@@ -79,3 +79,25 @@ a:nth-of-type(12) {
 }
 
 /* Jouw animaties */
+a:nth-of-type(2), a:nth-of-type(4), a:nth-of-type(8), a:nth-of-type(16) {
+  background: var(--highlight-secondary);
+  color: #050840;
+  border: none;
+}
+
+.design-flip {
+  transform: scaleX(-1);
+  background: var(--secondary);
+  color: var(--highlight-primary);
+}
+
+.flow-rotate {
+  transform: rotate(360deg);
+  transform-origin: 1em 1em;
+  transition: transform 0.3s;
+}
+
+[hidden] {
+  display: none !important;
+}
+
