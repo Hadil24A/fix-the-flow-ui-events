@@ -91,3 +91,12 @@ feedback.addEventListener('dblclick', function(){
 
   feedback.classList.toggle('feedback-fade-in')
 })
+
+// Element 9
+
+let user = document.querySelector('a:nth-of-type(9)')
+
+user.addEventListener('mouseover', function(){
+
+  user.classList.toggle('user-dissapear')
+})

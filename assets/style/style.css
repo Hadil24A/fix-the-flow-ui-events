@@ -79,7 +79,7 @@ a:nth-of-type(12) {
 }
 
 /* Jouw animaties */
-a:nth-of-type(2), a:nth-of-type(4), a:nth-of-type(8), a:nth-of-type(13), a:nth-of-type(15), a:nth-of-type(16), a:nth-of-type(18), a:nth-of-type(20) {
+a:nth-of-type(2), a:nth-of-type(4), a:nth-of-type(8), a:nth-of-type(9), a:nth-of-type(13), a:nth-of-type(15), a:nth-of-type(16), a:nth-of-type(18), a:nth-of-type(20) {
   background: var(--highlight-secondary);
   color: #050840;
   border: none;
@@ -122,8 +122,12 @@ a:nth-of-type(2), a:nth-of-type(4), a:nth-of-type(8), a:nth-of-type(13), a:nth-o
 }
 
 @keyframes code-animation {
-  0% {transform: rotate(0deg) scale(1);}
-  100% {transform: rotate(190deg) scale(5);}
+  0% {transform: rotate(0deg) scale(1);
+      filter: brightness(3) saturate(3);
+  }
+  100% {transform: rotate(190deg) scale(5);     
+        filter: brightness(1) saturate(1);
+  }
 }
 
 .states-size {
@@ -131,7 +135,8 @@ a:nth-of-type(2), a:nth-of-type(4), a:nth-of-type(8), a:nth-of-type(13), a:nth-o
 }
 
 @keyframes states-scale {
-  0% {transform: scale(1);}
+  0% {transform: scale(1);
+  }
   100% {
     transform: scale(5);
     background: var(--highlight-primary);
@@ -145,4 +150,7 @@ a:nth-of-type(2), a:nth-of-type(4), a:nth-of-type(8), a:nth-of-type(13), a:nth-o
 @keyframes fade {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+.user-drag {
 }
