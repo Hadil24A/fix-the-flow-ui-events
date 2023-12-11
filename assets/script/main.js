@@ -37,6 +37,12 @@ feedforward.addEventListener('dblclick', function (){
 
 let development = document.querySelector('a:nth-of-type(4)')
 
-development.addEventListener('keydown' function (){
-  
+document.addEventListener('keydown', function(event) {
+  console.log(event)
+  if (event.key =="h") {
+    development.classList.add('development-key')
+  }
+  if (event.key == "m") {
+    development.classList.remove('development-key')
+  }
 })
