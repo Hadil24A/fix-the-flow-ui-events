@@ -7,7 +7,7 @@ function jumpHandler() {
   interaction.classList.toggle('jump')
 }
 
-// Element 1
+// Element 1 click
 
 let design = document.querySelector('a:nth-of-type(2)')
 
@@ -16,7 +16,7 @@ design.addEventListener('click', function () {
 })
 
 
-// Element 2
+// Element 2 mouseover
 
 let flow = document.querySelector('a:nth-of-type(8)')
 
@@ -25,15 +25,21 @@ flow.addEventListener('mouseover', function () {
 })
 
 
-//  Element 3
+//  Element 3 dblclick & keydown
 
 let feedforward = document.querySelector('a:nth-of-type(16)')
 
 feedforward.addEventListener('dblclick', function (){
   feedforward.hidden = true
 })
+document.addEventListener('keydown', function(event) {
+  console.log(event)
+  
+  if (event.key == "x") {
+    feedforward.hidden = false  
+  }})
 
-// Element 4
+// Element 4 keydown
 
 let development = document.querySelector('a:nth-of-type(4)')
 
@@ -45,4 +51,23 @@ document.addEventListener('keydown', function(event) {
   if (event.key == "x") {
     development.classList.remove('development-key')
   }
+})
+
+// Element 5 click
+
+let userFlow = document.querySelector('a:nth-of-type(13)')
+
+userFlow.addEventListener('click', function() {
+
+  userFlow.classList.toggle('userFlow-colour')
+  })
+
+
+// Element 6 long press
+
+let code = document.querySelector('a:nth-of-type(20)')
+
+code.addEventListener('click', function() {
+
+  code.classList.toggle('code-click')
 })
