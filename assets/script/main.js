@@ -42,7 +42,7 @@ document.addEventListener('keydown', function(event) {
   if (event.key =="h") {
     development.classList.add('development-key')
   }
-  if (event.key == "m") {
+  if (event.key == "x") {
     development.classList.remove('development-key')
   }
 })
