@@ -83,7 +83,7 @@ states.addEventListener('mouseup', function() {
 })
 
 
-//  Element 8
+//  Element 8 double click
 
 let feedback = document.querySelector('a:nth-of-type(15)')
 
@@ -92,11 +92,44 @@ feedback.addEventListener('dblclick', function(){
   feedback.classList.toggle('feedback-fade-in')
 })
 
-// Element 9
+// Element 9 long press
 
 let user = document.querySelector('a:nth-of-type(9)')
+// let offsetX, offsetY;
 
-user.addEventListener('mouseover', function(){
+// const move = (e) => {
+//   user.style.left = `${e.clientX - offsetX}px`;
+//   user.style.top = `${e.clientY - offsetY}px`;
+// }
 
-  user.classList.toggle('user-dissapear')
+// user.addEventListener('longclick', function(e){
+//   offsetX = e.clientX - user.offsetLeft;
+//   offsetY = e.clientY - user.offsetTop;
+//   document.addEventListener('mousemove', move)
+
+user.addEventListener('mousemove', function(){
+
+  user.classList.toggle('user-change')
 })
+
+
+// Element 10 shake interactie, elementen vallen naar beneden 
+
+let fix = document.querySelector('a:nth-of-type(6)')
+
+fix.addEventListener('click', function() {
+
+  fix.classList.add('fix-fall')
+  design.classList.add('fix-fall')
+  development.classList.add('fix-fall')
+  flow.classList.add('fix-fall')
+  user.classList.add('fix-fall')
+  interaction.classList.add('fix-fall')
+  userFlow.classList.add('fix-fall')
+  feedback.classList.add('fix-fall')
+  feedforward.classList.add('fix-fall')
+  states.classList.add('fix-fall')
+  code.classList.add('fix-fall')
+})
+
+
